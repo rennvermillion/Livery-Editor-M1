@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+  <meta charset="UTF-8" />
+  <title>Layout</title>
+  <link rel="stylesheet" href="style.css" />
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+  <header class="app-header">
+    <button id="menu-toggle" class="hamburger">☰</button>
+    <div id="dropdown-menu" class="hidden">
+      <a href="https://discord.gg/MRyvxRMXtb" target="_blank">Discord</a>
+      <a href="">Coming Soon</a>
+      <a href="https://site-pcpm11sdj.godaddysites.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAQR-G1leHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaemlQ5gL0Ln558XSmxklQpL4d3MyzxG84RPLMl-qQH2yKgqZTCwRxFuX8-VLQ_aem_JHx5SnJ2zg9Pa-IitpwhXw" target="_blank">Official Site</a>   
+    </div>
+  </header>
+  <div class="app-grid">
+
+    <!-- LEFT: 3D / main area -->
+    <div class="left-panel">
+     <model-viewer src="" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" field-of-view="25deg">
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+    </button>
+    <div id="ar-prompt">
+    </div>
+</model-viewer>
+    </div>
+
+    <!-- RIGHT TOP: tabs + colors -->
+    <div class="right-top">
+      <div class="tabs">
+        <button>Vehicles</button>
+        <button>Wraps</button>
+        <button>Coming Soon</button>
+      </div>
+<div id="panel-buttons">
+  <button class="option" data-type="panel" data-value="color">Camaro SS Body</button>
+  <button class="option" data-type="panel" data-value="body.012">MK5 Supra Body</button>
+  <button class="option" data-type="panel" data-value="Vehicle_Exterior_mm_ext.002">BMW M2 Body</button>
+  <button class="option" data-type="panel" data-value="SKIN_00">SRT Hellcat Body</button>
+</div>
+
+<div id="color-buttons">
+  <button class="option" data-type="color" data-color="[1,0,0,1]">Red</button>
+  <button class="option" data-type="color" data-color="[0,0,1,1]">Blue</button>
+  <button class="option" data-type="color" data-color="[1,1,0,1]">Yellow</button>
+  <button class="option" data-type="color" data-color="[0,1,0,1]">Green</button>
+  <button class="option" data-type="color" data-color="[0.25,0,0.50,0.25]">Purple</button>
+  <button class="option" data-type="color" data-color="[1,0.5,0.75,1]">Pink</button>
+  <button class="option" data-type="color" data-color="[0.50,0.50,0.50,1]">Grey</button> 
+  <button class="option" data-type="color" data-color="[0,0,0,1]">Black</button> 
+</div>
+    </div>
+
+    <!-- RIGHT BOTTOM: content -->
+    <div class="right-bottom">
+      <!-- Add this inside the .right-bottom div, right after the comment -->
+      <div id="vehicles-options" class="options hidden">
+        <button class="option" data-type="vehicle" data-value="camaro">Chevrolet Camaro SS</button>
+        <button class="option" data-type="vehicle" data-value="charger">Dodge Charger SRT Hellcat</button>
+        <button class="option" data-type="vehicle" data-value="m2">BMW M2</button>
+        <button class="option" data-type="vehicle" data-value="supra">MK5 Supra</button>
+      </div>
+
+      <!-- Replace the wraps-options div inside .right-bottom with this -->
+      <div id="wraps-options" class="options hidden">
+        <button class="option" data-type="wrap" data-value="metallic">Metallic</button>
+        <button class="option" data-type="wrap" data-value="matte">Matte</button>
+        <button class="option" data-type="wrap" data-value="glossy">Glossy</button>
+      </div>
+
+      <div id="decals-options" class="options hidden">
+        <button class="option" data-type="decal" data-value="stripe">Stripe</button>
+        <button class="option" data-type="decal" data-value="logo">Logo</button>
+        <button class="option" data-type="decal" data-value="pattern">Pattern</button>
+      </div>
+      
+      <!-- whatever content -->
+    </div>
+</body>
+
+</html>
